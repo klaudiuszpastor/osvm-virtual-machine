@@ -1,4 +1,5 @@
 #pragma once
+#include <stdio.h>
 
 typedef unsigned char int8;
 typedef unsigned short int int16;
@@ -15,4 +16,5 @@ typedef unsigned long long int int64;
 
 void copy(int8 *dst, int8 *src, int16 size); 
 void zero(int8 *dst, int16 size);
+void printhex(int8 *p, int16 size, int8 delim);
 

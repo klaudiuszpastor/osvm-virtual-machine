@@ -17,3 +17,17 @@ void zero(int8 *dst, int16 size) {
 		*p = 0;
 	return;
 }
+
+void printhex(int8 *str, int16 size, int8 delim) {
+	int16 n;
+	int8 *p;
+
+	for (n = size, p = str; n; n--, p++) {
+		printf("%.02x", *p);
+		if (delim && n)
+			printf("%c", delim);
+		fflush(stdout);
+	}
+	printf("\n");
+	return;
+}
